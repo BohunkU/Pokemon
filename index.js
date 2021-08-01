@@ -22,12 +22,13 @@ function loadPage() {
   let pokemonGrid = document.querySelector(".pokemonGrid");
   let startButton = document.querySelector("#startButton");
   
+  // Mouse click
   
   startButton.addEventListener("click", () => {
     loadPage();
   });
   
-  
+   // Get card data
   
   function populatePokeCard(singlePokemon) {
     let pokeScene = document.createElement("div");
@@ -47,6 +48,8 @@ function loadPage() {
     return pokeScene.getBoundingClientRect()
   }
   
+ // Front of card
+
   function populateCardFront(pokemon) {
     let cardFront = document.createElement("div");
     cardFront.className = "card__face card__face--front";
@@ -59,6 +62,8 @@ function loadPage() {
     return cardFront;
   }
   
+  // From MS Teams
+
   function getImageFileName(pokemon) {
     if (pokemon.id < 10) {
       return `00${pokemon.id}`;
@@ -72,6 +77,8 @@ function loadPage() {
       return `pokeball`;
     }
   }
+
+  // Back of card
   
   function populateCardBack(pokemon) {
     let cardBack = document.createElement("div");
