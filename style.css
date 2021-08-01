@@ -1,0 +1,76 @@
+body { 
+    background-image: url('/Images/Cloud_practice.png');
+    background-repeat: space repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    font-family: sans-serif; 
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  img {
+    margin-top: .5rem;
+    max-width: 95%;
+  }
+  
+  li {
+    padding-left: 1px;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pokemonGrid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-left: 2px;
+  }
+  
+  .scene {
+    width: 200px;
+    height: 260px;
+    margin: 10px 0;
+    padding-left: 1rem;
+    perspective: 600px;
+    border-radius: 10px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    backface-visibility: hidden;
+    border-radius: 5%;
+  }
+  
+  .card__face--front {
+    background-image: linear-gradient( blue, red);
+  }
+  
+  .card__face--back {
+    background: blue;
+    transform: rotateY(180deg);
+  }
